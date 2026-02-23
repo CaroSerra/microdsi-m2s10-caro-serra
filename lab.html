@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>MicroDSI · Laboratorio</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="row">
+      <div class="brand">
+        <b>MicroDSI</b>
+        <span>Laboratorio</span>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="index.html">Inicio</a>
+        <a class="btn" href="feed.html">Feed</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="panel">
+      <h2>Entregable final</h2>
+      <p>
+        Completa las tres secciones. Cuando termines, genera y descarga el Markdown.
+      </p>
+    </section>
+
+    <hr class="sep"/>
+
+    <section class="panel">
+      <h3>1. Inventario (L1)</h3>
+      <label>Escribe 10–15 procesos (verbo + objeto), uno por línea</label>
+      <textarea id="inv" placeholder="Gestionar incidencias&#10;Dar de alta proveedor&#10;Gestionar permisos"></textarea>
+    </section>
+
+    <hr class="sep"/>
+
+    <section class="panel">
+      <h3>2. Priorización (Top 5)</h3>
+      <label>Formato: Proceso | Impacto | Esfuerzo | Riesgo | Score | Nota</label>
+      <textarea id="prio" placeholder="Gestionar incidencias | 5 | 3 | 3 | -1 | 6000 tickets/mes"></textarea>
+      <div class="footerHint">
+        Recomendación: Score = Impacto − Esfuerzo − Riesgo
+      </div>
+    </section>
+
+    <hr class="sep"/>
+
+    <section class="panel">
+      <h3>3. SIPOC</h3>
+      <label>Suppliers / Inputs / Process (4–6 pasos) / Outputs / Customers</label>
+      <textarea id="sipoc" placeholder="Suppliers:&#10;Inputs:&#10;Process:&#10;Outputs:&#10;Customers:"></textarea>
+
+      <div class="actions">
+        <button class="btn primary" id="btnExport" type="button">Generar Markdown</button>
+        <button class="btn" id="btnDownload" type="button">Descargar .md</button>
+      </div>
+    </section>
+
+    <hr class="sep"/>
+
+    <section class="panel">
+      <h3>Salida</h3>
+      <textarea id="mdOut" placeholder="Aquí aparecerá el Markdown..."></textarea>
+    </section>
+
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
